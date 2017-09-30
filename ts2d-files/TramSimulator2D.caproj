@@ -1,0 +1,1369 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>TramSimulator2D</name>
+    <description></description>
+    <version>hxsgpc 0.4.2</version>
+    <author>MineDen</author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id>com.mineden.ts2d</app-id>
+    <unique-id>2qpiupr2gjili</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1366</width>
+        <height>768</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Menu</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">Low quality</prop>
+        <prop name="Fullscreen scaling quality">Low</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use iOS retina display">All devices</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Menu">
+            <object-type name="btntext" sid="207245157413949">
+                <plugin id="Spritefont2" />
+                <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\dtwfont.png" />
+            </object-type>
+            <object-type name="classic" sid="355421980916637">
+                <plugin id="NinePatch" />
+                <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\new\yellowbtnbg.png" />
+            </object-type>
+            <object-type name="arena" sid="199485925142042">
+                <plugin id="NinePatch" />
+                <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\new\yellowbtnbg.png" />
+            </object-type>
+        </object-folder>
+        <object-type name="road" sid="3206956448522659">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\road.png" />
+        </object-type>
+        <object-type name="Keyboard" sid="4436305314906168">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="3506161195311074">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Touch" sid="2463496682349194">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Audio" sid="2722091819329769">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Browser" sid="3498868852026895">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="bg" sid="365173285464494">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="day" pingpong="0" repeatcount="1" repeatto="0" sid="258677677563754" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\sky\sky0.png" />
+                </animation>
+                <animation framecount="3" loop="0" name="tonight" pingpong="0" repeatcount="1" repeatto="0" sid="183027000815021" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\sky\sky1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\sky\sky2.png" />
+                </animation>
+                <animation framecount="3" loop="0" name="today" pingpong="0" repeatcount="1" repeatto="0" sid="779246753376841" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="night" pingpong="0" repeatcount="1" repeatto="0" sid="324858192294756" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\sky\sky2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="forwardZone" sid="841205438000583">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="360597437033496" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tram" sid="709341372918993">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Hitpoints" name="HP" sid="594942898408242" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="630622261757712">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="egrey_closedd" pingpong="0" repeatcount="1" repeatto="0" sid="190331625095693" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\electron_gr-fr1.png">
+                        <image-point name="psgIn" x="0.677273" y="0.678571" />
+                        <collision-poly>
+                            <point x="0.1" y="0.196429" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.9" y="0.196429" />
+                            <point x="0.981818" y="0.5" />
+                            <point x="0.936364" y="0.875" />
+                            <point x="0.5" y="0.946429" />
+                            <point x="0.0272727" y="0.946429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="egrey_openingd" pingpong="0" repeatcount="1" repeatto="0" sid="460342075371816" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="psgIn" x="0.677273" y="0.678571" />
+                        <collision-poly>
+                            <point x="0.1" y="0.196429" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.9" y="0.196429" />
+                            <point x="0.981818" y="0.5" />
+                            <point x="0.936364" y="0.875" />
+                            <point x="0.5" y="0.946429" />
+                            <point x="0.0272727" y="0.946429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\electron_gr-fr2.png">
+                        <image-point name="psgIn" x="0.677273" y="0.678571" />
+                        <collision-poly>
+                            <point x="0.1" y="0.196429" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.9" y="0.196429" />
+                            <point x="0.981818" y="0.5" />
+                            <point x="0.936364" y="0.875" />
+                            <point x="0.5" y="0.946429" />
+                            <point x="0.0272727" y="0.946429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\electron_gr-fr3.png">
+                        <image-point name="psgIn" x="0.677273" y="0.678571" />
+                        <collision-poly>
+                            <point x="0.1" y="0.196429" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.9" y="0.196429" />
+                            <point x="0.981818" y="0.5" />
+                            <point x="0.936364" y="0.875" />
+                            <point x="0.5" y="0.946429" />
+                            <point x="0.0272727" y="0.946429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="egrey_closingd" pingpong="0" repeatcount="1" repeatto="0" sid="501493450489666" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="psgIn" x="0.677273" y="0.678571" />
+                        <collision-poly>
+                            <point x="0.1" y="0.196429" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.9" y="0.196429" />
+                            <point x="0.981818" y="0.5" />
+                            <point x="0.936364" y="0.875" />
+                            <point x="0.5" y="0.946429" />
+                            <point x="0.0272727" y="0.946429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="psgIn" x="0.677273" y="0.678571" />
+                        <collision-poly>
+                            <point x="0.1" y="0.196429" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.9" y="0.196429" />
+                            <point x="0.981818" y="0.5" />
+                            <point x="0.936364" y="0.875" />
+                            <point x="0.5" y="0.946429" />
+                            <point x="0.0272727" y="0.946429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="psgIn" x="0.677273" y="0.678571" />
+                        <collision-poly>
+                            <point x="0.1" y="0.196429" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.9" y="0.196429" />
+                            <point x="0.981818" y="0.5" />
+                            <point x="0.936364" y="0.875" />
+                            <point x="0.5" y="0.946429" />
+                            <point x="0.0272727" y="0.946429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="egrey_opend" pingpong="0" repeatcount="1" repeatto="0" sid="750575032202778" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\electron_gr-fr3.png">
+                        <image-point name="psgIn" x="0.677273" y="0.678571" />
+                        <collision-poly>
+                            <point x="0.1" y="0.196429" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.9" y="0.196429" />
+                            <point x="0.981818" y="0.5" />
+                            <point x="0.936364" y="0.875" />
+                            <point x="0.5" y="0.946429" />
+                            <point x="0.0272727" y="0.946429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="eboost_closedd" pingpong="0" repeatcount="1" repeatto="0" sid="783184324999775" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\eboost-fr1.png">
+                        <image-point name="psgIn" x="0.677273" y="0.678571" />
+                        <collision-poly>
+                            <point x="0.1" y="0.196429" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.9" y="0.196429" />
+                            <point x="0.981818" y="0.5" />
+                            <point x="0.936364" y="0.875" />
+                            <point x="0.5" y="0.946429" />
+                            <point x="0.0272727" y="0.946429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="eboost_openingd" pingpong="0" repeatcount="1" repeatto="0" sid="524867094179056" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\eboost-fr1.png">
+                        <image-point name="psgIn" x="0.677273" y="0.678571" />
+                        <collision-poly>
+                            <point x="0.1" y="0.196429" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.9" y="0.196429" />
+                            <point x="0.981818" y="0.5" />
+                            <point x="0.936364" y="0.875" />
+                            <point x="0.5" y="0.946429" />
+                            <point x="0.0272727" y="0.946429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\eboost-fr2.png">
+                        <image-point name="psgIn" x="0.677273" y="0.678571" />
+                        <collision-poly>
+                            <point x="0.1" y="0.196429" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.9" y="0.196429" />
+                            <point x="0.981818" y="0.5" />
+                            <point x="0.936364" y="0.875" />
+                            <point x="0.5" y="0.946429" />
+                            <point x="0.0272727" y="0.946429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\eboost-fr3.png">
+                        <image-point name="psgIn" x="0.677273" y="0.678571" />
+                        <collision-poly>
+                            <point x="0.1" y="0.196429" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.9" y="0.196429" />
+                            <point x="0.981818" y="0.5" />
+                            <point x="0.936364" y="0.875" />
+                            <point x="0.5" y="0.946429" />
+                            <point x="0.0272727" y="0.946429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="eboost_closingd" pingpong="0" repeatcount="1" repeatto="0" sid="736367052165680" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="psgIn" x="0.677273" y="0.678571" />
+                        <collision-poly>
+                            <point x="0.1" y="0.196429" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.9" y="0.196429" />
+                            <point x="0.981818" y="0.5" />
+                            <point x="0.936364" y="0.875" />
+                            <point x="0.5" y="0.946429" />
+                            <point x="0.0272727" y="0.946429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="psgIn" x="0.677273" y="0.678571" />
+                        <collision-poly>
+                            <point x="0.1" y="0.196429" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.9" y="0.196429" />
+                            <point x="0.981818" y="0.5" />
+                            <point x="0.936364" y="0.875" />
+                            <point x="0.5" y="0.946429" />
+                            <point x="0.0272727" y="0.946429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="psgIn" x="0.677273" y="0.678571" />
+                        <collision-poly>
+                            <point x="0.1" y="0.196429" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.9" y="0.196429" />
+                            <point x="0.981818" y="0.5" />
+                            <point x="0.936364" y="0.875" />
+                            <point x="0.5" y="0.946429" />
+                            <point x="0.0272727" y="0.946429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="eboost_opend" pingpong="0" repeatcount="1" repeatto="0" sid="771419783918803" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\eboost-fr3.png">
+                        <image-point name="psgIn" x="0.677273" y="0.678571" />
+                        <collision-poly>
+                            <point x="0.1" y="0.196429" />
+                            <point x="0.5" y="0.160714" />
+                            <point x="0.9" y="0.196429" />
+                            <point x="0.981818" y="0.5" />
+                            <point x="0.936364" y="0.875" />
+                            <point x="0.5" y="0.946429" />
+                            <point x="0.0272727" y="0.946429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="stram_closedd" pingpong="0" repeatcount="1" repeatto="0" sid="872238136280344" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\stram-fr1.png">
+                        <image-point name="psgIn" x="0.612121" y="0.675595" />
+                        <collision-poly>
+                            <point x="0.0757576" y="0.184524" />
+                            <point x="0.980303" y="0.181548" />
+                            <point x="0.94697" y="0.857143" />
+                            <point x="0.901516" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                            <point x="0" y="0.324405" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="stram_openingd" pingpong="0" repeatcount="1" repeatto="0" sid="118824434486116" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="psgIn" x="0.612121" y="0.675595" />
+                        <collision-poly>
+                            <point x="0.0757576" y="0.184524" />
+                            <point x="0.980303" y="0.181548" />
+                            <point x="0.94697" y="0.857143" />
+                            <point x="0.901516" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                            <point x="0" y="0.324405" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\stram-fr2.png">
+                        <image-point name="psgIn" x="0.612121" y="0.675595" />
+                        <collision-poly>
+                            <point x="0.0757576" y="0.184524" />
+                            <point x="0.980303" y="0.181548" />
+                            <point x="0.94697" y="0.857143" />
+                            <point x="0.901516" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                            <point x="0" y="0.324405" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\stram-fr3.png">
+                        <image-point name="psgIn" x="0.612121" y="0.675595" />
+                        <collision-poly>
+                            <point x="0.0757576" y="0.184524" />
+                            <point x="0.980303" y="0.181548" />
+                            <point x="0.94697" y="0.857143" />
+                            <point x="0.901516" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                            <point x="0" y="0.324405" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="stram_closingd" pingpong="0" repeatcount="1" repeatto="0" sid="498150836774581" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="psgIn" x="0.612121" y="0.675595" />
+                        <collision-poly>
+                            <point x="0.0757576" y="0.184524" />
+                            <point x="0.980303" y="0.181548" />
+                            <point x="0.94697" y="0.857143" />
+                            <point x="0.901516" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                            <point x="0" y="0.324405" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="psgIn" x="0.612121" y="0.675595" />
+                        <collision-poly>
+                            <point x="0.0757576" y="0.184524" />
+                            <point x="0.980303" y="0.181548" />
+                            <point x="0.94697" y="0.857143" />
+                            <point x="0.901516" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                            <point x="0" y="0.324405" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="psgIn" x="0.612121" y="0.675595" />
+                        <collision-poly>
+                            <point x="0.0757576" y="0.184524" />
+                            <point x="0.980303" y="0.181548" />
+                            <point x="0.94697" y="0.857143" />
+                            <point x="0.901516" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                            <point x="0" y="0.324405" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="stram_opend" pingpong="0" repeatcount="1" repeatto="0" sid="369314527519357" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\stram-fr3.png">
+                        <image-point name="psgIn" x="0.612121" y="0.675595" />
+                        <collision-poly>
+                            <point x="0.0757576" y="0.184524" />
+                            <point x="0.980303" y="0.181548" />
+                            <point x="0.94697" y="0.857143" />
+                            <point x="0.901516" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                            <point x="0" y="0.324405" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="stramp_closedd" pingpong="0" repeatcount="1" repeatto="0" sid="807023612465397" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\stram2-fr1.png">
+                        <image-point name="psgIn" x="0.612121" y="0.675595" />
+                        <collision-poly>
+                            <point x="0.0757576" y="0.184524" />
+                            <point x="0.980303" y="0.181548" />
+                            <point x="0.980303" y="0.791667" />
+                            <point x="0.901516" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                            <point x="0" y="0.324405" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="stramp_openingd" pingpong="0" repeatcount="1" repeatto="0" sid="260617948406237" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="psgIn" x="0.612121" y="0.675595" />
+                        <collision-poly>
+                            <point x="0.0757576" y="0.184524" />
+                            <point x="0.980303" y="0.181548" />
+                            <point x="0.980303" y="0.791667" />
+                            <point x="0.901516" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                            <point x="0" y="0.324405" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\stram2-fr2.png">
+                        <image-point name="psgIn" x="0.612121" y="0.675595" />
+                        <collision-poly>
+                            <point x="0.0757576" y="0.184524" />
+                            <point x="0.980303" y="0.181548" />
+                            <point x="0.980303" y="0.791667" />
+                            <point x="0.901516" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                            <point x="0" y="0.324405" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\stram2-fr3.png">
+                        <image-point name="psgIn" x="0.612121" y="0.675595" />
+                        <collision-poly>
+                            <point x="0.0757576" y="0.184524" />
+                            <point x="0.980303" y="0.181548" />
+                            <point x="0.980303" y="0.791667" />
+                            <point x="0.901516" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                            <point x="0" y="0.324405" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="stramp_closingd" pingpong="0" repeatcount="1" repeatto="0" sid="712468743096147" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="psgIn" x="0.612121" y="0.675595" />
+                        <collision-poly>
+                            <point x="0.0757576" y="0.184524" />
+                            <point x="0.980303" y="0.181548" />
+                            <point x="0.980303" y="0.791667" />
+                            <point x="0.901516" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                            <point x="0" y="0.324405" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="psgIn" x="0.612121" y="0.675595" />
+                        <collision-poly>
+                            <point x="0.0757576" y="0.184524" />
+                            <point x="0.980303" y="0.181548" />
+                            <point x="0.980303" y="0.791667" />
+                            <point x="0.901516" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                            <point x="0" y="0.324405" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="psgIn" x="0.612121" y="0.675595" />
+                        <collision-poly>
+                            <point x="0.0757576" y="0.184524" />
+                            <point x="0.980303" y="0.181548" />
+                            <point x="0.980303" y="0.791667" />
+                            <point x="0.901516" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                            <point x="0" y="0.324405" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="stramp_opend" pingpong="0" repeatcount="1" repeatto="0" sid="513936188438896" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\stram2-fr3.png">
+                        <image-point name="psgIn" x="0.612121" y="0.675595" />
+                        <collision-poly>
+                            <point x="0.0757576" y="0.184524" />
+                            <point x="0.980303" y="0.181548" />
+                            <point x="0.980303" y="0.791667" />
+                            <point x="0.901516" y="0.9375" />
+                            <point x="0" y="0.9375" />
+                            <point x="0" y="0.324405" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="backwardZone" sid="368288388441168">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="603009369217432" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="car" sid="549315478830317">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Hitpoints" name="HP" sid="361937141497269" type="number" />
+                <instance-variable name="car" sid="346587053003702" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="cartest_hhp" pingpong="0" repeatcount="1" repeatto="0" sid="494040241353192" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\cars\cartest\hhp.png">
+                        <image-point name="crash" x="0.065625" y="0.60625" />
+                        <collision-poly>
+                            <point x="0.378125" y="0.14375" />
+                            <point x="0.645312" y="0.140625" />
+                            <point x="0.70625" y="0.425" />
+                            <point x="0.953125" y="0.44375" />
+                            <point x="0.971875" y="0.85625" />
+                            <point x="0.05" y="0.85625" />
+                            <point x="0.065625" y="0.44375" />
+                            <point x="0.31875" y="0.4375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="cartest_mhp" pingpong="0" repeatcount="1" repeatto="0" sid="376400400886305" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\cars\cartest\mhp.png">
+                        <image-point name="crash" x="0.109375" y="0.55" />
+                        <collision-poly>
+                            <point x="0.378125" y="0.14375" />
+                            <point x="0.645312" y="0.140625" />
+                            <point x="0.70625" y="0.425" />
+                            <point x="0.953125" y="0.44375" />
+                            <point x="0.971875" y="0.85625" />
+                            <point x="0.05" y="0.85625" />
+                            <point x="0.065625" y="0.44375" />
+                            <point x="0.31875" y="0.4375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="cartest_lhp" pingpong="0" repeatcount="1" repeatto="0" sid="513562886168618" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\cars\cartest\lhp.png">
+                        <image-point name="crash" x="0.05625" y="0.6625" />
+                        <collision-poly>
+                            <point x="0.378125" y="0.14375" />
+                            <point x="0.645312" y="0.140625" />
+                            <point x="0.70625" y="0.425" />
+                            <point x="0.953125" y="0.44375" />
+                            <point x="0.971875" y="0.85625" />
+                            <point x="0.05" y="0.85625" />
+                            <point x="0.065625" y="0.44375" />
+                            <point x="0.31875" y="0.4375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="cherry_hhp" pingpong="0" repeatcount="1" repeatto="0" sid="593996280836149" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\cars\cherry\hhp.png">
+                        <image-point name="crash" x="0.065625" y="0.60625" />
+                        <collision-poly>
+                            <point x="0.378125" y="0.14375" />
+                            <point x="0.645312" y="0.140625" />
+                            <point x="0.70625" y="0.425" />
+                            <point x="0.953125" y="0.44375" />
+                            <point x="0.971875" y="0.85625" />
+                            <point x="0.05" y="0.85625" />
+                            <point x="0.065625" y="0.44375" />
+                            <point x="0.31875" y="0.4375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="cherry_mhp" pingpong="0" repeatcount="1" repeatto="0" sid="496346194086836" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\cars\cherry\mhp.png">
+                        <image-point name="crash" x="0.065625" y="0.60625" />
+                        <collision-poly>
+                            <point x="0.378125" y="0.14375" />
+                            <point x="0.645312" y="0.140625" />
+                            <point x="0.70625" y="0.425" />
+                            <point x="0.953125" y="0.44375" />
+                            <point x="0.971875" y="0.85625" />
+                            <point x="0.05" y="0.85625" />
+                            <point x="0.065625" y="0.44375" />
+                            <point x="0.31875" y="0.4375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="cherry_lhp" pingpong="0" repeatcount="1" repeatto="0" sid="230290208960233" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\cars\cherry\lhp.png">
+                        <image-point name="crash" x="0.065625" y="0.60625" />
+                        <collision-poly>
+                            <point x="0.378125" y="0.14375" />
+                            <point x="0.645312" y="0.140625" />
+                            <point x="0.70625" y="0.425" />
+                            <point x="0.953125" y="0.44375" />
+                            <point x="0.971875" y="0.85625" />
+                            <point x="0.05" y="0.85625" />
+                            <point x="0.065625" y="0.44375" />
+                            <point x="0.31875" y="0.4375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="em32_hhp" pingpong="0" repeatcount="1" repeatto="0" sid="864530019836382" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\cars\em32\hhp.png">
+                        <image-point name="crash" x="0.065625" y="0.60625" />
+                        <collision-poly>
+                            <point x="0.334375" y="0.1375" />
+                            <point x="0.664062" y="0.140625" />
+                            <point x="0.690625" y="0.425" />
+                            <point x="0.921875" y="0.5" />
+                            <point x="0.921875" y="0.90625" />
+                            <point x="0.078125" y="0.925" />
+                            <point x="0.075" y="0.5125" />
+                            <point x="0.309375" y="0.425" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="em32_mhp" pingpong="0" repeatcount="1" repeatto="0" sid="545041443735335" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\cars\em32\mhp.png">
+                        <image-point name="crash" x="0.065625" y="0.60625" />
+                        <collision-poly>
+                            <point x="0.334375" y="0.1375" />
+                            <point x="0.664062" y="0.140625" />
+                            <point x="0.690625" y="0.425" />
+                            <point x="0.921875" y="0.5" />
+                            <point x="0.921875" y="0.90625" />
+                            <point x="0.078125" y="0.925" />
+                            <point x="0.075" y="0.5125" />
+                            <point x="0.309375" y="0.425" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="em32_lhp" pingpong="0" repeatcount="1" repeatto="0" sid="103857789376760" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\cars\em32\lhp.png">
+                        <image-point name="crash" x="0.065625" y="0.60625" />
+                        <collision-poly>
+                            <point x="0.334375" y="0.1375" />
+                            <point x="0.664062" y="0.140625" />
+                            <point x="0.690625" y="0.425" />
+                            <point x="0.921875" y="0.5" />
+                            <point x="0.921875" y="0.90625" />
+                            <point x="0.078125" y="0.925" />
+                            <point x="0.075" y="0.5125" />
+                            <point x="0.309375" y="0.425" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="bee_hhp" pingpong="0" repeatcount="1" repeatto="0" sid="555214423309406" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\cars\bee\hhp.png">
+                        <image-point name="crash" x="0.065625" y="0.60625" />
+                        <collision-poly>
+                            <point x="0.340625" y="0.175" />
+                            <point x="0.498437" y="0.184375" />
+                            <point x="0.6125" y="0.425" />
+                            <point x="0.753125" y="0.4375" />
+                            <point x="0.96875" y="0.88125" />
+                            <point x="0.01875" y="0.89375" />
+                            <point x="0.234375" y="0.44375" />
+                            <point x="0.259375" y="0.325" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="bee_mhp" pingpong="0" repeatcount="1" repeatto="0" sid="106629585978590" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\cars\bee\mhp.png">
+                        <image-point name="crash" x="0.065625" y="0.60625" />
+                        <collision-poly>
+                            <point x="0.340625" y="0.175" />
+                            <point x="0.498437" y="0.184375" />
+                            <point x="0.6125" y="0.425" />
+                            <point x="0.753125" y="0.4375" />
+                            <point x="0.96875" y="0.88125" />
+                            <point x="0.01875" y="0.89375" />
+                            <point x="0.234375" y="0.44375" />
+                            <point x="0.259375" y="0.325" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="bee_lhp" pingpong="0" repeatcount="1" repeatto="0" sid="694148278319939" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\cars\bee\lhp.png">
+                        <image-point name="crash" x="0.065625" y="0.60625" />
+                        <collision-poly>
+                            <point x="0.340625" y="0.175" />
+                            <point x="0.498437" y="0.184375" />
+                            <point x="0.6125" y="0.425" />
+                            <point x="0.753125" y="0.4375" />
+                            <point x="0.96875" y="0.88125" />
+                            <point x="0.01875" y="0.89375" />
+                            <point x="0.234375" y="0.44375" />
+                            <point x="0.259375" y="0.325" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="carspawner" sid="984430796934315">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="786483730962404" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="touchts" sid="124493090596304">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="hpbg" sid="900129347404058">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="735637653472413" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\level\hpbg.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0" />
+                            <point x="0.989583" y="0.0625" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="carhpbar" sid="161607124180709">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="hhp" pingpong="0" repeatcount="1" repeatto="0" sid="207059075554011" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\cars\hp\hhp.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="mhp" pingpong="0" repeatcount="1" repeatto="0" sid="969856275071611" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\cars\hp\mhp.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="lhp" pingpong="0" repeatcount="1" repeatto="0" sid="465629143204237" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\cars\hp\lhp.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="stop" sid="798792489331720">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="stop1" pingpong="0" repeatcount="1" repeatto="0" sid="483745887597107" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\stops\stop-sheet1.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.972" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="0.288" />
+                            <point x="0" y="1" />
+                            <point x="0.028" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="stop2" pingpong="0" repeatcount="1" repeatto="0" sid="165585949064497" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\stops\stop2.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.972" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="0.288" />
+                            <point x="0" y="1" />
+                            <point x="0.028" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="open_doors" sid="408315610726038">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="220366389475268" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\new\open_doors.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="enetwire" sid="170952009526533">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\enetwire.png" />
+        </object-type>
+        <object-type name="psg" sid="449061736382580">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="isOut" sid="554444893072909" type="number" />
+                <instance-variable name="goX" sid="762164187349456" type="number" />
+                <instance-variable name="goY" sid="228461335209789" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="psg1" pingpong="0" repeatcount="1" repeatto="0" sid="562704708681527" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\psg0.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.09375" />
+                            <point x="0.5" y="0" />
+                            <point x="0.6875" y="0.15625" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.875" y="0.9375" />
+                            <point x="0.5" y="1" />
+                            <point x="0.1875" y="0.90625" />
+                            <point x="0.0625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="psg2" pingpong="0" repeatcount="1" repeatto="0" sid="446365337551705" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\driver.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.6875" y="0.15625" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.875" y="0.9375" />
+                            <point x="0.5" y="1" />
+                            <point x="0.1875" y="0.90625" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tlights" sid="941079509416796">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="red" pingpong="0" repeatcount="1" repeatto="0" sid="465104018999278" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\tlights.png">
+                        <collision-poly>
+                            <point x="0.1" y="0.0166667" />
+                            <point x="0.9" y="0.0166667" />
+                            <point x="0.6" y="1" />
+                            <point x="0.4" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="yellow" pingpong="0" repeatcount="1" repeatto="0" sid="388764056416489" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\tlightsy.png">
+                        <collision-poly>
+                            <point x="0.1" y="0.0166667" />
+                            <point x="0.9" y="0.0166667" />
+                            <point x="0.6" y="1" />
+                            <point x="0.4" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="green" pingpong="0" repeatcount="1" repeatto="0" sid="948531536028403" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\tlightsg.png">
+                        <collision-poly>
+                            <point x="0.1" y="0.0166667" />
+                            <point x="0.9" y="0.0166667" />
+                            <point x="0.6" y="1" />
+                            <point x="0.4" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="red2" pingpong="0" repeatcount="1" repeatto="0" sid="430842357080301" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\tlights2.png">
+                        <collision-poly>
+                            <point x="0" y="0.0333333" />
+                            <point x="1" y="0.0333333" />
+                            <point x="0.616667" y="0.188889" />
+                            <point x="0.6" y="0.933333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.4" y="0.933333" />
+                            <point x="0.4" y="0.186111" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="yellow2" pingpong="0" repeatcount="1" repeatto="0" sid="877191176931515" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\tlights2y.png">
+                        <collision-poly>
+                            <point x="0" y="0.0333333" />
+                            <point x="1" y="0.0333333" />
+                            <point x="0.616667" y="0.188889" />
+                            <point x="0.6" y="0.933333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.4" y="0.933333" />
+                            <point x="0.4" y="0.186111" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="green2" pingpong="0" repeatcount="1" repeatto="0" sid="257911409317332" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\tlights2g.png">
+                        <collision-poly>
+                            <point x="0" y="0.0333333" />
+                            <point x="1" y="0.0333333" />
+                            <point x="0.616667" y="0.188889" />
+                            <point x="0.6" y="0.933333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.4" y="0.933333" />
+                            <point x="0.4" y="0.186111" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="storage" sid="777838991353618">
+            <plugin id="LocalStorage" />
+        </object-type>
+        <object-type name="xp" sid="368161213668893">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\dtwfont.png" />
+        </object-type>
+        <object-type name="xpbg" sid="304868053501709">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315762943128367" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\level\xpbg.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.989583" y="0.9375" />
+                            <point x="0.5" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="buyshield" sid="426783550654783">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="613466778151474" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504274" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\new\shieldbuy.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.025641" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.025641" />
+                            <point x="1" y="0.495726" />
+                            <point x="0.96875" y="0.974359" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.974359" />
+                            <point x="0" y="0.495726" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="shieldcost" sid="797593781663682">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\dtfont.png" />
+        </object-type>
+        <object-type name="shield" sid="968942339497492">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="HP" sid="411123454459002" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="shield" pingpong="0" repeatcount="1" repeatto="0" sid="847777730990437" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\shield.png">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="0.981481" y="0.66" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.346667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="shield2" pingpong="0" repeatcount="1" repeatto="0" sid="401848909628022" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\shield2.png">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="0.981481" y="0.66" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.346667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="shield3" pingpong="0" repeatcount="1" repeatto="0" sid="421943604009470" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\trams\shield3.png">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="0.981481" y="0.66" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.346667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bell" sid="808470091675494">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="132486885368037" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\new\bell.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.96875" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="buyshield2" sid="393381873742292">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="998378764453691" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504274" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\new\shield2buy.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.025641" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.025641" />
+                            <point x="1" y="0.495726" />
+                            <point x="0.96875" y="0.974359" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.974359" />
+                            <point x="0" y="0.495726" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="shield2cost" sid="190389231176836">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\dtfont.png" />
+        </object-type>
+        <object-type name="buyshield3" sid="929730449202985">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="147010827805560" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504274" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\new\shield3buy.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.025641" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.025641" />
+                            <point x="1" y="0.495726" />
+                            <point x="0.96875" y="0.974359" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.974359" />
+                            <point x="0" y="0.495726" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="shield3cost" sid="718229002663865">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\dtfont.png" />
+        </object-type>
+        <object-type name="version" sid="274166573092211">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\dtwfont.png" />
+        </object-type>
+        <object-type name="speedbar" sid="596204830762768">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="648360692629166" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\new\speedbar.png">
+                        <collision-poly>
+                            <point x="0.004" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.996" y="0.25" />
+                            <point x="0.996" y="0.75" />
+                            <point x="0.5" y="1" />
+                            <point x="0.004" y="0.75" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sbartick" sid="650344158319401">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="645999386697451" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gotext" sid="356641026334952">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\dtwfont.png" />
+        </object-type>
+        <object-type name="gorestart" sid="774819578462114">
+            <plugin id="NinePatch" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\new\yellowbtnbg.png" />
+        </object-type>
+        <object-type name="achtrigger" sid="702507731513462">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="gorestarttext" sid="584330750920958">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\dtwfont.png" />
+        </object-type>
+        <object-type name="tomenu" sid="681030940097438">
+            <plugin id="NinePatch" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\new\yellowbtnbg.png" />
+        </object-type>
+        <object-type name="gold" sid="618716165651693">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\dtwfont.png" />
+        </object-type>
+        <object-type name="goBG" sid="380081924207008">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="889136189166364" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="getindicator" sid="370191355551751">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\dtwfont.png" />
+        </object-type>
+        <object-type name="fpshow" sid="796626379800589">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\dtwfont.png" />
+        </object-type>
+        <object-type name="goreason" sid="431341973171909">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\dtwfont.png" />
+        </object-type>
+        <object-type global="1" name="ach_array" sid="210234857286709">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="achbg" sid="480128302827878">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="154353926237580" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\new\achbg.png">
+                        <collision-poly>
+                            <point x="0.01" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.99" y="0.03125" />
+                            <point x="0.99" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.01" y="0.96875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="achget" sid="199611827898019">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\dtwfont.png" />
+        </object-type>
+        <object-type name="achname" sid="973525023068106">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\dtwfont.png" />
+        </object-type>
+        <object-type name="hp" sid="896664437369632">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\level\hp.png" />
+        </object-type>
+        <object-type name="xpflow" sid="139719482321258">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\level\xp.png" />
+        </object-type>
+        <object-type name="infopbg" sid="966563505595226">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="767763187381501" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\new\infopane.png">
+                        <collision-poly>
+                            <point x="0.0138889" y="0.0666667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.986111" y="0.0666667" />
+                            <point x="1" y="0.5" />
+                            <point x="0.986111" y="0.933333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0138889" y="0.933333" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="temperature" sid="773744815431816">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\infpfont.png" />
+        </object-type>
+        <object-type name="speed" sid="334716553817506">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\infpfont.png" />
+        </object-type>
+        <object-type name="buylightning" sid="981717747775691">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="403346047635207" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504274" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\new\lightningbuy.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.025641" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.025641" />
+                            <point x="1" y="0.495726" />
+                            <point x="0.96875" y="0.974359" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.974359" />
+                            <point x="0" y="0.495726" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lightningcost" sid="640693159233443">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\dtwfont.png" />
+        </object-type>
+        <object-type name="lbolt" sid="209973296994528">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="166131659972905" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\lightning_beam.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.791667" y="0.0260417" />
+                            <point x="0.708333" y="0.5" />
+                            <point x="0.791667" y="0.973958" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.96875" />
+                            <point x="0.166667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="shieldbg" sid="867435905056968">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="501972892892144" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\level\shieldbg.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0" />
+                            <point x="0.989583" y="0.0625" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="shieldhp" sid="116780855490912">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\level\shield.png" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Game.xml</layout>
+        <layout>Menu.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Game events.xml</event-sheet>
+        <event-sheet>Menu events.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Mouse" uid="4" />
+        <global-instance type="Touch" uid="5">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="6">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="7" />
+        <global-instance type="storage" uid="22" />
+        <global-instance type="achtrigger" uid="41" />
+    </global-instances>
+    <sounds-folder>
+        <file name="explosion.m4a" />
+        <file name="explosion.ogg" />
+        <file name="crash.m4a" />
+        <file name="crash.ogg" />
+        <file name="egrey_close.ogg" />
+        <file name="egrey_bell.m4a" />
+        <file name="egrey_bell.ogg" />
+        <file name="egrey_open.ogg" />
+        <file name="stram_bell.m4a" />
+        <file name="stram_bell.ogg" />
+        <file name="warn.m4a" />
+        <file name="warn.ogg" />
+        <file name="eboost_bell.m4a" />
+        <file name="eboost_bell.ogg" />
+        <file name="donnerre2.m4a" />
+        <file name="donnerre2.ogg" />
+        <file name="stramp_bell.m4a" />
+        <file name="stramp_bell.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="MattOglseby - 1.m4a" />
+        <file name="MattOglseby - 1.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu events</name>
+    <events>
+        <event-block sid="968121854228622">
+            <conditions>
+                <condition id="3" name="On touched object" sid="864460398480431" type="Touch">
+                    <param id="0" name="Object">classic</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="542263792362555" type="System">
+                    <param id="0" name="Variable">canOpenDoors</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="735309643102712" type="System">
+                    <param id="0" name="Variable">od</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="208626678572917" type="System">
+                    <param id="0" name="Variable">psgIn</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="538621999557027" type="System">
+                    <param id="0" name="Variable">spawnedPsg</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="379049447567113" type="System">
+                    <param id="0" name="Variable">speed</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="592937640157124" type="System">
+                    <param id="0" name="Variable">stopPsg</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="770327584630347" type="System">
+                    <param id="0" name="Variable">totalPsg</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="225233229639805" type="tram">
+                    <param id="0" name="Instance variable">HP</param>
+                    <param id="1" name="Value">maxhp</param>
+                </action>
+                <action id="-9" name="Set value" sid="993532204107723" type="System">
+                    <param id="0" name="Variable">tl_fr</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="226258551751659" type="System">
+                    <param id="0" name="Variable">heat</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="533616095452042" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="835792117266761" title="Levels2">
+            <sub-events>
+                <event-block sid="596110020934603">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="811709717562953" type="storage">
+                            <param id="0" name="Key">&quot;lvl&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="812499246663952" type="System">
+                            <param id="0" name="Variable">lvl</param>
+                            <param id="1" name="Value">storage.ItemValue</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="765481592400006" type="System">
+                            <param id="0" name="Variable">maxxp</param>
+                            <param id="1" name="Value">50 * lvl + 5 * lvl * 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="897384023264865" type="System">
+                            <param id="0" name="Variable">shieldcost</param>
+                            <param id="1" name="Value">round(4 * (lvl / 2))</param>
+                        </action>
+                        <action id="0" name="Set text" sid="780764334128091" type="shieldcost">
+                            <param id="0" name="Text">&quot;x&quot; &amp; round(shieldcost)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="627381204243321" type="System">
+                            <param id="0" name="Variable">shield2cost</param>
+                            <param id="1" name="Value">round(6 * (lvl / 2))</param>
+                        </action>
+                        <action id="0" name="Set text" sid="831262536277114" type="shield2cost">
+                            <param id="0" name="Text">&quot;x&quot; &amp; round(shield2cost)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="719515797861264" type="System">
+                            <param id="0" name="Variable">shield3cost</param>
+                            <param id="1" name="Value">round(9 * (lvl / 2))</param>
+                        </action>
+                        <action id="0" name="Set text" sid="308911061162033" type="shield3cost">
+                            <param id="0" name="Text">&quot;x&quot; &amp; round(shield3cost)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="356382952375025">
+                    <conditions>
+                        <condition id="10" name="On item missing" sid="670452198823544" type="storage">
+                            <param id="0" name="Key">&quot;lvl&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="181961954795067" type="System">
+                            <param id="0" name="Variable">lvl</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set item" sid="613487937264781" type="storage">
+                            <param id="0" name="Key">&quot;lvl&quot;</param>
+                            <param id="1" name="Value">lvl</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="742185021284185" type="System">
+                            <param id="0" name="Variable">maxxp</param>
+                            <param id="1" name="Value">50 * lvl + 5 * lvl * 2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="460134272219915" type="System">
+                            <param id="0" name="Variable">shieldcost</param>
+                            <param id="1" name="Value">round(5 * (lvl / 2))</param>
+                        </action>
+                        <action id="0" name="Set text" sid="939318757639885" type="shieldcost">
+                            <param id="0" name="Text">&quot;x&quot; &amp; round(shieldcost)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="585071561990304" type="System">
+                            <param id="0" name="Variable">shield2cost</param>
+                            <param id="1" name="Value">round(6 * (lvl / 2))</param>
+                        </action>
+                        <action id="0" name="Set text" sid="636890845564888" type="shield2cost">
+                            <param id="0" name="Text">&quot;x&quot; &amp; round(shield2cost)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="483102180914022" type="System">
+                            <param id="0" name="Variable">shield3cost</param>
+                            <param id="1" name="Value">round(9 * (lvl / 2))</param>
+                        </action>
+                        <action id="0" name="Set text" sid="214458810027956" type="shield3cost">
+                            <param id="0" name="Text">&quot;x&quot; &amp; round(shield3cost)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="819280432854259">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="852396575261925" type="storage">
+                            <param id="0" name="Key">&quot;xp&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="779271245536822" type="System">
+                            <param id="0" name="Variable">xp</param>
+                            <param id="1" name="Value">storage.ItemValue</param>
+                        </action>
+                        <action id="0" name="Set text" sid="184277661586203" type="xp">
+                            <param id="0" name="Text">round(xp) &amp; &quot;/&quot; &amp; round(maxxp)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="430973071476158">
+                    <conditions>
+                        <condition id="10" name="On item missing" sid="882104428719963" type="storage">
+                            <param id="0" name="Key">&quot;xp&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="668005472349468" type="System">
+                            <param id="0" name="Variable">xp</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set item" sid="593858086170755" type="storage">
+                            <param id="0" name="Key">&quot;xp&quot;</param>
+                            <param id="1" name="Value">xp</param>
+                        </action>
+                        <action id="0" name="Set text" sid="755724673046529" type="xp">
+                            <param id="0" name="Text">round(xp) &amp; &quot;/&quot; &amp; round(maxxp)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="389673950019054">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="572556523190350" type="storage">
+                            <param id="0" name="Key">&quot;gold&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="239590438232089" type="System">
+                            <param id="0" name="Variable">gold</param>
+                            <param id="1" name="Value">storage.ItemValue</param>
+                        </action>
+                        <action id="0" name="Set text" sid="789598897814740" type="gold">
+                            <param id="0" name="Text">gold &amp; &quot;g&quot; </param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="301848081683517">
+                    <conditions>
+                        <condition id="10" name="On item missing" sid="264361512761898" type="storage">
+                            <param id="0" name="Key">&quot;gold&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="195017364498369" type="System">
+                            <param id="0" name="Variable">gold</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set item" sid="422830297113509" type="storage">
+                            <param id="0" name="Key">&quot;gold&quot;</param>
+                            <param id="1" name="Value">gold</param>
+                        </action>
+                        <action id="0" name="Set text" sid="951725626137319" type="gold">
+                            <param id="0" name="Text">gold &amp; &quot;g&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="859631970134218">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="675942793528463" type="System">
+                            <param id="0" name="Variable">xp</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">maxxp</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="380922475754357" type="System">
+                            <param id="0" name="Variable">lvl</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="806439112526341" type="System">
+                            <param id="0" name="Variable">xp</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="445287554019995" type="System">
+                            <param id="0" name="Variable">maxxp</param>
+                            <param id="1" name="Value">50 * lvl + 5 * lvl * 2</param>
+                        </action>
+                        <action id="0" name="Set item" sid="510441377475482" type="storage">
+                            <param id="0" name="Key">&quot;lvl&quot;</param>
+                            <param id="1" name="Value">lvl</param>
+                        </action>
+                        <action id="0" name="Set item" sid="926988458203907" type="storage">
+                            <param id="0" name="Key">&quot;xp&quot;</param>
+                            <param id="1" name="Value">xp</param>
+                        </action>
+                        <action id="0" name="Set text" sid="550186243142342" type="xp">
+                            <param id="0" name="Text">round(xp) &amp; &quot;/&quot; &amp; round(maxxp)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="634391245464325" type="System">
+                            <param id="0" name="Variable">shieldcost</param>
+                            <param id="1" name="Value">round(4 * (lvl / 2))</param>
+                        </action>
+                        <action id="0" name="Set text" sid="514543960143393" type="shieldcost">
+                            <param id="0" name="Text">&quot;x&quot; &amp; round(shieldcost)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="600654785057297" type="System">
+                            <param id="0" name="Variable">shield2cost</param>
+                            <param id="1" name="Value">round(6 * (lvl / 2))</param>
+                        </action>
+                        <action id="0" name="Set text" sid="237068023014398" type="shield2cost">
+                            <param id="0" name="Text">&quot;x&quot; &amp; round(shield2cost)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="663112754720447" type="System">
+                            <param id="0" name="Variable">shield3cost</param>
+                            <param id="1" name="Value">round(9 * (lvl / 2))</param>
+                        </action>
+                        <action id="0" name="Set text" sid="225535879337390" type="shield3cost">
+                            <param id="0" name="Text">&quot;x&quot; &amp; round(shield3cost)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="396080873993888" type="System">
+                            <param id="0" name="Variable">shieldcost</param>
+                            <param id="1" name="Value">round(4 * (lvl / 2))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="650563750132011">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="363680664873014" type="System">
+                            <param id="0" name="Variable">lvl</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="835723458788560" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="120089460071817" type="System">
+                            <param id="0" name="Variable">curTram</param>
+                            <param id="1" name="Value">&quot;eboost&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="405234688786201" type="tram">
+                            <param id="0" name="Animation">&quot;eboost_closedd&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="851545123789176" type="System">
+                            <param id="0" name="Variable">maxspeed</param>
+                            <param id="1" name="Value">eboost_MAXSPEED</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="411333088254214" type="System">
+                            <param id="0" name="Variable">maxhp</param>
+                            <param id="1" name="Value">280</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="615196211492831" type="System">
+                            <param id="0" name="Variable">onehp</param>
+                            <param id="1" name="Value">280 / 94</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="976959082664719" type="tram">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Value">280</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="355704440163618">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="220925605592247" type="System">
+                            <param id="0" name="Variable">lvl</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="351733074049636" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="819210031535994" type="System">
+                            <param id="0" name="Variable">curTram</param>
+                            <param id="1" name="Value">&quot;stram&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="681308348253731" type="tram">
+                            <param id="0" name="Animation">&quot;stram_closedd&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="242353683844824" type="System">
+                            <param id="0" name="Variable">maxspeed</param>
+                            <param id="1" name="Value">stram_MAXSPEED</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="656414249942646" type="System">
+                            <param id="0" name="Variable">maxhp</param>
+                            <param id="1" name="Value">300</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="836452977564567" type="System">
+                            <param id="0" name="Variable">onehp</param>
+                            <param id="1" name="Value">300 / 94</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="119939812844583" type="tram">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Value">300</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="951676599463927">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="674225012867249" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Check item exists" sid="651024766565496" type="storage">
+                    <param id="0" name="Key">&quot;lvl&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="652919157231475" type="storage">
+                    <param id="0" name="Key">&quot;xp&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="730046344389356" type="storage">
+                    <param id="0" name="Key">&quot;gold&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
