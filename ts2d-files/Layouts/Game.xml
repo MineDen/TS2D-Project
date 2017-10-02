@@ -971,7 +971,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>59</x>
+                        <x>167</x>
                         <y>143</y>
                         <z>0</z>
                         <width>96</width>
@@ -1001,7 +1001,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>14</x>
+                        <x>122</x>
                         <y>177</y>
                         <z>0</z>
                         <width>90</width>
@@ -1048,6 +1048,78 @@
                         <z>0</z>
                         <width>378</width>
                         <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="heal" uid="30">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Center</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>79</x>
+                        <y>-88</y>
+                        <z>0</z>
+                        <width>140</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="buyiheal" uid="63">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>60</x>
+                        <y>143</y>
+                        <z>0</z>
+                        <width>96</width>
+                        <height>117</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.504273534</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ihealcost" uid="64">
+                    <properties>
+                        <character-width>5</character-width>
+                        <character-height>5</character-height>
+                        <character-set>абвгдеєжзиіїйклмнопрстуфхцчшщьюя0123456789hxgspc/\-_][=*-+:.|,!</character-set>
+                        <text>x10</text>
+                        <scale>3</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>15</x>
+                        <y>177</y>
+                        <z>0</z>
+                        <width>90</width>
+                        <height>21</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

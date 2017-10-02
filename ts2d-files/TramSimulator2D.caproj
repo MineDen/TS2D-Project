@@ -2,7 +2,7 @@
 <c2project>
     <name>TramSimulator2D</name>
     <description></description>
-    <version>hxsgpc 0.4.2</version>
+    <version>hxsgpc 0.4.4</version>
     <author>MineDen</author>
     <author-email></author-email>
     <author-website></author-website>
@@ -1295,6 +1295,33 @@
         <object-type name="shieldhp" sid="116780855490912">
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\level\shield.png" />
+        </object-type>
+        <object-type name="heal" sid="901134016389907">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\MineDen\Documents\ts2d-github\TS2D-Project\textures\buttons\level\heal.png" />
+        </object-type>
+        <object-type name="buyiheal" sid="205008999307849">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="448968249055266" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504274" original-source="C:\Users\MineDen\Documents\ts2d-github\TS2D-Project\textures\buttons\new\ihealbuy.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.025641" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.025641" />
+                            <point x="1" y="0.495726" />
+                            <point x="0.96875" y="0.974359" />
+                            <point x="0.5" y="1" />
+                            <point x="0.03125" y="0.974359" />
+                            <point x="0" y="0.495726" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ihealcost" sid="182372996480037">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MineDen\Desktop\TramSimulator2D\Textures\buttons\dtwfont.png" />
         </object-type>
     </object-folder>
     <families />

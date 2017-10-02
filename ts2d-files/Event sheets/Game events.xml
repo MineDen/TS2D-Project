@@ -12,6 +12,7 @@
         <variable constant="0" name="shield2cost" sid="322215502337980" static="0" type="number">6</variable>
         <variable constant="0" name="shield3cost" sid="632359398330850" static="0" type="number">9</variable>
         <variable constant="0" name="lightningcost" sid="304484891023980" static="0" type="number">12</variable>
+        <variable constant="0" name="ihealcost" sid="335492779555500" static="0" type="number">10</variable>
         <variable constant="0" name="xp" sid="992073412843962" static="0" type="number">0</variable>
         <variable constant="0" name="gold" sid="701029004951377" static="0" type="number">0</variable>
         <variable constant="0" name="totalGold" sid="166401796606252" static="0" type="number">0</variable>
@@ -270,7 +271,7 @@
                                     <param id="0" name="Key">65 (A)</param>
                                 </condition>
                                 <condition id="2" name="Key is down" sid="918962657792915" type="Keyboard">
-                                    <param id="0" name="Key">219 ([)</param>
+                                    <param id="0" name="Key">219 (х)</param>
                                 </condition>
                                 <condition id="2" name="Key is down" sid="193013546645732" type="Keyboard">
                                     <param id="0" name="Key">16 (Shift)</param>
@@ -282,6 +283,14 @@
                                     <param id="1" name="Value">0.015 * speed</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="516118786737554">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="120506885063086" type="System" />
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -310,7 +319,7 @@
                                     <param id="0" name="Key">68 (D)</param>
                                 </condition>
                                 <condition id="2" name="Key is down" sid="683326019853594" type="Keyboard">
-                                    <param id="0" name="Key">221 (])</param>
+                                    <param id="0" name="Key">221 (ї)</param>
                                 </condition>
                                 <condition id="2" name="Key is down" sid="658382340764980" type="Keyboard">
                                     <param id="0" name="Key">17 (Ctrl)</param>
@@ -645,7 +654,7 @@
                 <event-block sid="324675572853558">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="480225150088649" type="System">
-                            <param id="0" name="Interval (seconds)">300.0</param>
+                            <param id="0" name="Interval (seconds)">240.0</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -2070,7 +2079,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="366717622819487" type="System">
                             <param id="0" name="Variable">onehp</param>
-                            <param id="1" name="Value">250 / 126</param>
+                            <param id="1" name="Value">maxhp / 126</param>
                         </action>
                         <action id="-9" name="Set value" sid="767806309484012" type="System">
                             <param id="0" name="Variable">maxxp</param>
@@ -2107,6 +2116,13 @@
                         <action id="-9" name="Set value" sid="477076206939792" type="System">
                             <param id="0" name="Variable">onexp</param>
                             <param id="1" name="Value">maxxp / 126</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="270476427214618" type="System">
+                            <param id="0" name="Variable">ihealcost</param>
+                            <param id="1" name="Value">round(10 * (lvl / 2) + maxhp / 8)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="207249454346534" type="ihealcost">
+                            <param id="0" name="Text">&quot;x&quot; &amp; round(ihealcost)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2164,6 +2180,13 @@
                         <action id="-9" name="Set value" sid="467890586735097" type="System">
                             <param id="0" name="Variable">onehp</param>
                             <param id="1" name="Value">250 / 126</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="836736798159481" type="System">
+                            <param id="0" name="Variable">ihealcost</param>
+                            <param id="1" name="Value">round(10 * (lvl / 2) + maxhp / 8)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="128971670989373" type="ihealcost">
+                            <param id="0" name="Text">&quot;x&quot; &amp; round(ihealcost)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -2310,6 +2333,13 @@
                         <action id="-9" name="Set value" sid="421679437583026" type="System">
                             <param id="0" name="Variable">onexp</param>
                             <param id="1" name="Value">maxxp / 126</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="507535127128307" type="System">
+                            <param id="0" name="Variable">ihealcost</param>
+                            <param id="1" name="Value">round(10 * (lvl / 2) + maxhp / 8)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="351624812578412" type="ihealcost">
+                            <param id="0" name="Text">&quot;x&quot; &amp; round(ihealcost)</param>
                         </action>
                         <action id="0" name="Call function" sid="300266044430330" type="achtrigger">
                             <param id="0" name="Name">&quot;levelup&quot;</param>
@@ -2923,6 +2953,13 @@
                             <param id="0" name="Layer">5</param>
                             <param id="1" name="Opacity">LayerOpacity(5) - 100 / fps</param>
                         </action>
+                        <action id="-7" name="Set size" sid="770403357520108" type="heal">
+                            <param id="0" name="Width">Self.Width + 100 / fps</param>
+                            <param id="1" name="Height">Self.Height + 100 / fps</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="706535097638084" type="heal">
+                            <param id="0" name="Opacity">Self.Opacity - 300 / fps</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="219353550371623">
@@ -2942,6 +2979,17 @@
                             <param id="0" name="Layer">5</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="999146646869854">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="800727755494312" type="heal">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Opacity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="545728432973126" type="heal" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -3539,131 +3587,186 @@
         </event-group>
         <event-group description="Special abilities that can be used by tram" sid="679704767027551" title="Abilities">
             <sub-events>
-                <event-block sid="820831700806829">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="435238951522131" type="Touch">
-                            <param id="0" name="Object">buylightning</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="661698478470648" type="System">
-                            <param id="0" name="Variable">xp</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">round(lightningcost)</param>
-                        </condition>
-                        <condition id="-1" name="Compare X" sid="926326546788453" type="car">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="X co-ordinate">1366 + Self.Width / 2</param>
-                        </condition>
-                        <condition id="-1" name="Compare X" sid="867768266150187" type="car">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="X co-ordinate">tram.Width</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-18" name="Set layer opacity" sid="360878793759978" type="System">
-                            <param id="0" name="Layer">5</param>
-                            <param id="1" name="Opacity">100</param>
-                        </action>
-                        <action id="-4" name="Set layer visible" sid="215986031988277" type="System">
-                            <param id="0" name="Layer">5</param>
-                            <param id="1" name="Visibility">1</param>
-                        </action>
-                        <action id="-11" name="Subtract from" sid="601456753229942" type="System">
-                            <param id="0" name="Variable">xp</param>
-                            <param id="1" name="Value">lightningcost</param>
-                        </action>
-                        <action id="0" name="Set item" sid="678609276524936" type="storage">
-                            <param id="0" name="Key">&quot;xp&quot;</param>
-                            <param id="1" name="Value">xp</param>
-                        </action>
-                        <action id="0" name="Call function" sid="206374849465688" type="achtrigger">
-                            <param id="0" name="Name">&quot;lightning_used&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                <event-group description="" sid="839166416576542" title="Instant Heal">
                     <sub-events>
-                        <event-block sid="333034856961229">
+                        <event-block sid="809950066759170">
                             <conditions>
-                                <condition id="-12" name="Repeat" sid="462396608503145" type="System">
-                                    <param id="0" name="Count">round(random(1, 1.8))</param>
+                                <condition id="3" name="On touched object" sid="423679182763998" type="Touch">
+                                    <param id="0" name="Object">buyiheal</param>
                                 </condition>
-                                <condition id="-16" name="Pick random instance" sid="186741017140571" type="System">
-                                    <param id="0" name="Object">car</param>
+                                <condition id="-14" name="Compare variable" sid="866759359969507" type="System">
+                                    <param id="0" name="Variable">xp</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">round(ihealcost)</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="112567697965690" type="tram">
+                                    <param id="0" name="Instance variable">HP</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">maxhp</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="159060175129877" type="System">
-                                    <param id="0" name="Object to create">lbolt</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">round(random(car.X - car.Width / 2, car.X + car.Width / 2))</param>
-                                    <param id="3" name="Y">round(random(car.Y - car.Height / 3, car.Y + car.Height / 3))</param>
+                                <action id="-3" name="Create object" sid="452750991904387" type="System">
+                                    <param id="0" name="Object to create">heal</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">hp.X + hp.Width</param>
+                                    <param id="3" name="Y">hp.Y + hp.Height / 2</param>
                                 </action>
-                                <action id="-12" name="Subtract from" sid="983908006084591" type="car">
+                                <action id="-5" name="Set width" sid="648632785133257" type="heal">
+                                    <param id="0" name="Width">(maxhp - tram.HP) / onehp * 3</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="815107323979207" type="heal">
+                                    <param id="0" name="X">Self.X + Self.Width / 2</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="661623435296593" type="System">
+                                    <param id="0" name="Variable">xp</param>
+                                    <param id="1" name="Value">ihealcost</param>
+                                </action>
+                                <action id="0" name="Set item" sid="466917952071797" type="storage">
+                                    <param id="0" name="Key">&quot;xp&quot;</param>
+                                    <param id="1" name="Value">xp</param>
+                                </action>
+                                <action id="0" name="Call function" sid="389086847577950" type="achtrigger">
+                                    <param id="0" name="Name">&quot;iheal_used&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-10" name="Set value" sid="458929091898307" type="tram">
                                     <param id="0" name="Instance variable">HP</param>
-                                    <param id="1" name="Value">20 + 4.2 * lvl</param>
-                                </action>
-                                <action id="25" name="Play at object" sid="459208015933562" type="Audio">
-                                    <param id="0" name="Audio file">donnerre2</param>
-                                    <param id="1" name="Loop">0</param>
-                                    <param id="2" name="Volume">0</param>
-                                    <param id="3" name="Object">lbolt</param>
-                                    <param id="4" name="Inner angle">360</param>
-                                    <param id="5" name="Outer angle">0</param>
-                                    <param id="6" name="Outer gain">0</param>
-                                    <param id="7" name="Tag (optional)">&quot;lightning&quot;</param>
+                                    <param id="1" name="Value">maxhp</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="366689912088328">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="790912500598305" type="System">
-                            <param id="0" name="Interval (seconds)">12.0</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="526897780470804" type="System">
-                            <param id="0" name="First value">round(random(-0.2,2))</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">2</param>
-                        </condition>
-                        <condition id="2" name="Is playing" sid="667893146629322" type="bg">
-                            <param id="0" name="Animation">&quot;night&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-18" name="Set layer opacity" sid="809602566987768" type="System">
-                            <param id="0" name="Layer">5</param>
-                            <param id="1" name="Opacity">100</param>
-                        </action>
-                        <action id="-4" name="Set layer visible" sid="433410788640716" type="System">
-                            <param id="0" name="Layer">5</param>
-                            <param id="1" name="Visibility">1</param>
-                        </action>
-                    </actions>
+                </event-group>
+                <event-group description="" sid="361678173985920" title="Lightning">
                     <sub-events>
-                        <event-block sid="172670172234145">
+                        <event-block sid="820831700806829">
                             <conditions>
-                                <condition id="-12" name="Repeat" sid="302349687023604" type="System">
-                                    <param id="0" name="Count">round(random(1, 1.8))</param>
+                                <condition id="3" name="On touched object" sid="435238951522131" type="Touch">
+                                    <param id="0" name="Object">buylightning</param>
                                 </condition>
-                                <condition id="-16" name="Pick random instance" sid="313262998518002" type="System">
-                                    <param id="0" name="Object">car</param>
+                                <condition id="-14" name="Compare variable" sid="661698478470648" type="System">
+                                    <param id="0" name="Variable">xp</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">round(lightningcost)</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="926326546788453" type="car">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">1366 + Self.Width / 2</param>
+                                </condition>
+                                <condition id="-1" name="Compare X" sid="867768266150187" type="car">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">tram.Width</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="882760460249754" type="System">
-                                    <param id="0" name="Object to create">lbolt</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">round(random(car.X - car.Width / 2, car.X + car.Width / 2))</param>
-                                    <param id="3" name="Y">round(random(car.Y - car.Height / 3, car.Y + car.Height / 3))</param>
+                                <action id="-18" name="Set layer opacity" sid="360878793759978" type="System">
+                                    <param id="0" name="Layer">5</param>
+                                    <param id="1" name="Opacity">100</param>
                                 </action>
-                                <action id="-12" name="Subtract from" sid="631660784316762" type="car">
-                                    <param id="0" name="Instance variable">HP</param>
-                                    <param id="1" name="Value">20 + 3.8 * lvl</param>
+                                <action id="-4" name="Set layer visible" sid="215986031988277" type="System">
+                                    <param id="0" name="Layer">5</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="601456753229942" type="System">
+                                    <param id="0" name="Variable">xp</param>
+                                    <param id="1" name="Value">lightningcost</param>
+                                </action>
+                                <action id="0" name="Set item" sid="678609276524936" type="storage">
+                                    <param id="0" name="Key">&quot;xp&quot;</param>
+                                    <param id="1" name="Value">xp</param>
+                                </action>
+                                <action id="0" name="Call function" sid="206374849465688" type="achtrigger">
+                                    <param id="0" name="Name">&quot;lightning_used&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="333034856961229">
+                                    <conditions>
+                                        <condition id="-12" name="Repeat" sid="462396608503145" type="System">
+                                            <param id="0" name="Count">round(random(1, 1.8))</param>
+                                        </condition>
+                                        <condition id="-16" name="Pick random instance" sid="186741017140571" type="System">
+                                            <param id="0" name="Object">car</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="159060175129877" type="System">
+                                            <param id="0" name="Object to create">lbolt</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">round(random(car.X - car.Width / 2, car.X + car.Width / 2))</param>
+                                            <param id="3" name="Y">round(random(car.Y - car.Height / 3, car.Y + car.Height / 3))</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="983908006084591" type="car">
+                                            <param id="0" name="Instance variable">HP</param>
+                                            <param id="1" name="Value">20 + 4.2 * lvl</param>
+                                        </action>
+                                        <action id="25" name="Play at object" sid="459208015933562" type="Audio">
+                                            <param id="0" name="Audio file">donnerre2</param>
+                                            <param id="1" name="Loop">0</param>
+                                            <param id="2" name="Volume">0</param>
+                                            <param id="3" name="Object">lbolt</param>
+                                            <param id="4" name="Inner angle">360</param>
+                                            <param id="5" name="Outer angle">0</param>
+                                            <param id="6" name="Outer gain">0</param>
+                                            <param id="7" name="Tag (optional)">&quot;lightning&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="366689912088328">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="790912500598305" type="System">
+                                    <param id="0" name="Interval (seconds)">12.0</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="526897780470804" type="System">
+                                    <param id="0" name="First value">round(random(-0.2,2))</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="667893146629322" type="bg">
+                                    <param id="0" name="Animation">&quot;night&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-18" name="Set layer opacity" sid="809602566987768" type="System">
+                                    <param id="0" name="Layer">5</param>
+                                    <param id="1" name="Opacity">100</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="433410788640716" type="System">
+                                    <param id="0" name="Layer">5</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="172670172234145">
+                                    <conditions>
+                                        <condition id="-12" name="Repeat" sid="302349687023604" type="System">
+                                            <param id="0" name="Count">round(random(1, 1.8))</param>
+                                        </condition>
+                                        <condition id="-16" name="Pick random instance" sid="313262998518002" type="System">
+                                            <param id="0" name="Object">car</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="882760460249754" type="System">
+                                            <param id="0" name="Object to create">lbolt</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">round(random(car.X - car.Width / 2, car.X + car.Width / 2))</param>
+                                            <param id="3" name="Y">round(random(car.Y - car.Height / 3, car.Y + car.Height / 3))</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="631660784316762" type="car">
+                                            <param id="0" name="Instance variable">HP</param>
+                                            <param id="1" name="Value">20 + 3.8 * lvl</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
-                </event-block>
+                </event-group>
             </sub-events>
         </event-group>
     </events>
