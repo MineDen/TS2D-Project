@@ -271,7 +271,7 @@
                                     <param id="0" name="Key">65 (A)</param>
                                 </condition>
                                 <condition id="2" name="Key is down" sid="918962657792915" type="Keyboard">
-                                    <param id="0" name="Key">219 (х)</param>
+                                    <param id="0" name="Key">219 ([)</param>
                                 </condition>
                                 <condition id="2" name="Key is down" sid="193013546645732" type="Keyboard">
                                     <param id="0" name="Key">16 (Shift)</param>
@@ -319,7 +319,7 @@
                                     <param id="0" name="Key">68 (D)</param>
                                 </condition>
                                 <condition id="2" name="Key is down" sid="683326019853594" type="Keyboard">
-                                    <param id="0" name="Key">221 (ї)</param>
+                                    <param id="0" name="Key">221 (])</param>
                                 </condition>
                                 <condition id="2" name="Key is down" sid="658382340764980" type="Keyboard">
                                     <param id="0" name="Key">17 (Ctrl)</param>
@@ -541,7 +541,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Play" sid="851406163898834" type="Audio">
-                                    <param id="0" name="Audio file">MattOglseby - 1</param>
+                                    <param id="0" name="Audio file">MattOglseby-1</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">-2</param>
                                     <param id="1" name="Tag (optional)">&quot;music&quot;</param>
@@ -642,7 +642,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Play" sid="378024495651879" type="Audio">
-                                    <param id="0" name="Audio file">MattOglseby - 1</param>
+                                    <param id="0" name="Audio file">MattOglseby-1</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">-2</param>
                                     <param id="1" name="Tag (optional)">&quot;music&quot;</param>

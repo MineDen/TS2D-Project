@@ -1380,8 +1380,8 @@
         <file name="stramp_bell.ogg" />
     </sounds-folder>
     <music-folder>
-        <file name="MattOglseby - 1.m4a" />
-        <file name="MattOglseby - 1.ogg" />
+        <file name="MattOglseby-1.m4a" />
+        <file name="MattOglseby-1.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
