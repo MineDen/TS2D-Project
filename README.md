@@ -1,5 +1,7 @@
 # TS2D Project
   
+wtf i made it when i was 11
+
 TS2D Project is a tram driving simulator.  
 **Note:** TS2D (TramSimulator2D) is created using Construct 2, and available on GitHub since version 0.4.2.
 
